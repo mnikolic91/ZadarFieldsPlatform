@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="contact-clean" style="background: rgba(241,247,252,0);">
+    <form method="post" style="background: rgba(135,131,30,0.73);">
+        <h2 class="text-center" style="color: var(--bs-gray-100);font-family: Amiri, serif;">Kontaktirajte nas!</h2>
+        <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="Ime" style="font-family: Amiri, serif;"></div>
+        <div class="mb-3"><input class="form-control is-invalid" type="email" name="email" placeholder="E-mail" style="font-family: Amiri, serif;"><small class="form-text text-dark flash animated" style="font-family: Amiri, serif;">Molim Vas unesite ispravnu e-mail adresu.</small></div>
+        <div class="mb-3"><textarea class="form-control" name="message" placeholder="Poruka" rows="14" style="font-family: Amiri, serif;"></textarea></div>
+        <div class="mb-3"><button class="btn btn-primary" type="submit" style="font-family: Amiri, serif;">POŠALJI</button></div>
+    </form>
+</section>
+
+{% endblock %}

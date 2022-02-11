@@ -1,0 +1,115 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+
+                <h1 class="fw-bolder mb-1">Univerzalni blog post</h1>
+                <!-- Post meta content-->
+                <div class="text-muted fst-italic mb-2">Objavljeno 28 studenog 2021.</div>
+                <!-- Post categories-->
+                </header>
+
+                <!-- Post content-->
+                <section class="mb-5">
+                    <p class="fs-5 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nunc id cursus metus aliquam eleifend mi. Dictum sit amet justo donec enim diam vulputate. Egestas quis
+                        ipsum suspendisse ultrices gravida dictum fusce ut. Congue quisque egestas diam in arcu cursus euismod quis viverra.</p>
+                    <p class="fs-5 mb-4">Facilisis mauris sit amet massa vitae. Quis auctor elit sed vulputate mi sit amet mauris commodo. Nam aliquam sem et tortor consequat. Viverra tellus in hac habitasse platea dictumst vestibulum.</p>
+                    <p class="fs-5 mb-4">Diam phasellus vestibulum lorem sed risus. Neque viverra justo nec ultrices dui sapien eget mi. </p>
+                    <h2 class="fw-bolder mb-4 mt-5">Lorem ispum GRANDE</h2>
+                    <p class="fs-5 mb-4">Pellentesque dignissim enim sit amet venenatis urna cursus eget. Et pharetra pharetra massa massa ultricies mi quis. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut. </p>
+                    <p class="fs-5 mb-4">Nam libero justo laoreet sit amet cursus sit amet. Metus dictum at tempor commodo ullamcorper a. Ac turpis egestas sed tempus urna et. Condimentum lacinia quis vel eros donec ac odio. Sed enim ut sem viverra. Donec pretium vulputate
+                        sapien nec sagittis aliquam.</p>
+                </section>
+            </article>
+            <!-- Comments section-->
+            <section class="mb-5">
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <!-- Comment form-->
+                        <form class="mb-5"><textarea class="form-control" rows="3" placeholder="Kometirajte!"></textarea></form>
+                        <!-- Comment with nested comments-->
+                        <div class="d-flex mb-4">
+                            <!-- Parent comment-->
+                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..."></div>
+                            <div class="ms-3">
+                                <div class="fw-bold">Krešo</div>
+                                Samo naprijed ekipa
+                                <!-- Child comment 1-->
+                                <div class="d-flex mt-4">
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..."></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Ivan Jurlina</div>
+                                        Mater me odgojila na magarećem mlijeku i žlicom soli
+                                    </div>
+                                </div>
+                                <!-- Child comment 2-->
+                                <div class="d-flex mt-4">
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..."></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Šime Viduka</div>
+                                        Na pašnjaku sam rođen u pašnjak ću se i vratiti
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single comment-->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..."></div>
+                            <div class="ms-3">
+                                <div class="fw-bold">Jure Batur</div>
+                                Volim janjetinu više nego rodjenu mate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Side widgets-->
+        <div class="col-lg-4">
+            <!-- Search widget-->
+            <div class="card mb-5">
+                <div class="card-header">Pretraži</div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="Upiši pojam..." aria-label="Enter search term..." aria-describedby="button-search">
+                        <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Categories widget-->
+            <div class="card mb-5">
+                <div class="card-header">Kategorije</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#!">Maslina</a></li>
+                                <li><a href="#!">Maslinovo ulje</a></li>
+                                <li><a href="#!">Nadin</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#!">Poljoprivreda</a></li>
+                                <li><a href="#!">OPG</a></li>
+                                <li><a href="#!">Zadarska županija</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Side widget-->
+            <div class="card mb-5">
+                <div class="card-header">Dnevne mudrosti</div>
+                <div class="card-body">Tko rano rani, dvije sreće grabi!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

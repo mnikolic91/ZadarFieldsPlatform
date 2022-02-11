@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Zadarska Polja</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='img/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alatsi">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atomic+Age">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Metamorphous&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral:300,300i,400,400i">
+    <link rel="stylesheet" href="{{ url_for('static',filename='fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='fonts/fontawesome5-overrides.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/-Identity-Page-BS4-.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/accordion-faq-list.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Article-List.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Block-Responsive-Item-List.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/blog-1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/blog.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Contact-Form-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/FAQ-Frequentlly-Asked-Questions-1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/FAQ-Frequentlly-Asked-Questions.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Footer-Dark.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Highlight-Clean.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Map-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Navigation-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Navigation-with-Search.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Newsletter-Subscription-Form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Parallax-Effect-Template-Landing-Page-Bootstrap-4-1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Parallax-Effect-Template-Landing-Page-Bootstrap-4.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Pretty-Search-Form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Registration-Form-with-Photo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive-blog-card-slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/SBWP-Search-Bar-With-Parameters.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Search-Input-responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Simple-Slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles-1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+</head>
+
+<body style="background: linear-gradient(90deg, #175f3e 0%, #618c1c 84%), var(--bs-green);">
+    <nav class="navbar navbar-light navbar-expand-lg sticky-top navigation-clean" style="background: #87831e;">
+        <div class="container">
+            <a class="navbar-brand" data-bss-hover-animate="pulse" href="{{ url_for('index') }}" style="font-family: Metamorphous, serif;background: transparent;color: var(--bs-gray-100);">zadarska polja</a><button data-bs-toggle="collapse" class="navbar-toggler"
+                data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse d-lg-flex align-self-center" id="navcol-1" style="padding-left: 0px;"><i class="fas fa-search float-start swing animated search-icon"></i><input class="form-control-sm float-start float-sm-end swing animated custom-search-input" type="search" placeholder="Pretraži me..." style="color: var(--bs-yellow);filter: brightness(176%) saturate(96%);font-family: Amiri, serif;font-size: 14px;border-color: var(--bs-white);"
+                    autocomplete="on" inputmode="latin">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link float-start" data-bss-hover-animate="pulse" href="{{ url_for('index') }}" style="font-family: Amiri, serif;color: var(--bs-gray-300);">naslovnica</a></li>
+                    <li class="nav-item"><a class="nav-link float-start" data-bss-hover-animate="pulse" href="{{ url_for('opgovi') }}" style="font-family: Amiri, serif;color: var(--bs-gray-200);">opg-ovi</a></li>
+                    <li class="nav-item"><a class="nav-link float-start" data-bss-hover-animate="pulse" href="{{ url_for('blog') }}" style="color: var(--bs-gray-200);font-family: Amiri, serif;">blog</a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link float-start" aria-expanded="true" data-bs-toggle="dropdown" data-bss-hover-animate="pulse" href="#" style="font-family: Amiri, serif;color: var(--bs-gray-200);">za opg-ove</a>
+                        <div class="dropdown-menu" style="background: #8a7735;"><a class="dropdown-item" href="{{ url_for('linkovi') }}" style="font-family: Amiri, serif;color: var(--bs-body-bg);background: #8a7735;">korisni linkovi</a><a class="dropdown-item" href="{{ url_for('obrazac') }}" style="font-family: Amiri, serif;color: var(--bs-light);background: #8a7735;">obrazac</a>
+                            <a class="dropdown-item" href="{{ url_for('faq') }}" style="font-family: Amiri, serif;color: var(--bs-body-bg);background: #8a7735;">faq</a>
+                        </div>
+                    </li>
+                </ul><a class="float-end" data-bss-hover-animate="pulse" href="{{ url_for('kontakt') }}" style="font-family: Amiri, serif;color: var(--bs-gray-200);font-weight: bold;">kontakt</a>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<footer class="footer-dark" style="background: rgba(135,131,30,0.56);font-family: Amiri, serif;font-size: 18px;">
+    <div>
+        <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+                <h3></h3>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+                <h3>Općenito</h3>
+                <ul>
+                    <li><a href="{{ url_for('kontakt') }}">Kontakt</a></li>
+                    <li><a href="{{ url_for('kontakt') }}">Marketing</a></li>
+                    <li><a href="{{ url_for('linkovi') }}">Partneri</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 item text">
+                <h3>Želite li se pridružiti našoj bazi OPG-ova?</h3>
+                <p></p><a href="{{ url_for('obrazac') }}" style="font-size: 19px;color: var(--bs-body-color);">Ispunite obrazac.</a>
+            </div>
+            <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+        </div>
+        <p class="copyright">Zadarska polja © 2021</p>
+    </div>
+</footer>
+<script src="{{ url_for('static',filename='js/SBWP-Search-Bar-With-Parameters.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bs-init.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="{{ url_for('static',filename='js/-Identity-Page-BS4-.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+<script src="{{ url_for('static',filename='js/responsive-blog-card-slider-1.js') }}"></script>
+<script src="{{ url_for('static',filename='js/responsive-blog-card-slider.js') }}"></script>
+<script src="{{ url_for('static',filename='js/scripts.js') }}"></script>
+<script src="{{ url_for('static',filename='js/Simple-Slider.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+
+</html>
