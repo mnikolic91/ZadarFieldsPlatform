@@ -105,6 +105,34 @@ body {
 
 }
 
+.solo {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--bs-font-sans-serif);
+  color: var(--bs-info-rgb);
+  font-size: 3rem;
+
+}
+
+
+.smanji {
+
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+  
+}
+
+.form-container {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding-bottom: 20px;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
