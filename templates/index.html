@@ -2,23 +2,7 @@
 
 <div class="container">
     <div class="row">
-      <!--protstor za implementaciju baze-->
-
  
-
-    
-
-
-
-    <!--kraj baze--> 
-
-
-
-
-
-
-
-
         <div class="col-md-6 col-lg-3" style="margin-top: 15px;"><img data-bss-hover-animate="swing" src="{{ url_for('static',filename='img/kuplok.png') }}"></div>
     </div>
 </div>
@@ -53,12 +37,12 @@
             <h2 class="text-center" style="color: #313437;">Pretplatite se na naš Newsletter!</h2>
             <p class="text-center" style="font-size: 18px;color: var(--bs-gray-100);">Primajte tjedne novosti na Vaš e-mail.</p>
         </div>
-        <form class="d-flex justify-content-center flex-wrap" method="post"> 
+        <form class="d-flex justify-content-center flex-wrap" action="/newsletter" method="post"> 
             <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Vaša e-mail adresa"></div>
             <div class="mb-3"><button class="btn btn-primary" type="submit" style="background: linear-gradient(#87831e 0%, #87831e 97%);">PRETPLATI SE!</button></div>
         </form>
     </div>
-</section>
+</section> 
 
 <!--KRAJ NEWSLETTERA-->
 

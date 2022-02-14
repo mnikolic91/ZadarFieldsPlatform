@@ -1,10 +1,10 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField, BooleanField
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired, Email
 from flask_mail import Mail, Message
-import sqlite3
+import email_validator
 
 
 
@@ -51,6 +51,10 @@ def kontakt():
 def linkovi():
     return render_template('linkovi.html')
 
+@app.route('/newsletter')
+def newsletter():
+    return render_template('newsletter.html')
+
 @app.route('/obrazac', methods=['GET', 'POST'])
 def obrazac():
     form = OPGForm()
@@ -66,65 +70,17 @@ def opgovi():
     return render_template('opgovi.html')
 
 
-#metoda za flask mail
-@app.route("/poslano")
-def send():
-     msg = Message('Alo?', sender='zadarskapolja@gmail.com', recipients=['marija.nikolic.cro@gmail.com', 'marija.pavlovic19@gmail.com'])
-     msg.body = "Da je baba muško, zvala bi se Duško!"
-     mail.send(msg)
-     return 'Poslano'
+#FORMA ZA SKUPLJANJE MAILA ZA NEWSLETTER
+@app.route('/newsletter', methods = ['POST', 'GET'])
+def signup():
+    email = request.form['email']
+    msg = Message('Alo?', sender='zadarskapolja@gmail.com', recipients=[email])
+    msg.body = "Da je baba muško, zvala bi se Duško!"
+    mail.send(msg)
+    return render_template('newsletter.html')
+  
+  
 
-#KONEKCIJA I ISPIS BAZE
-#PROBLEM PROBLEM PROBLEM PROBLEM PROBLEM PROBLEM PROBLEM PROBLEM PROBLEM
-
-sql_files = [
-    './create.sql',
-    './insert opg.sql',
-    './select_opg.sql'
-]
-
-conn = sqlite3.connect('./opg_baza.db')
-
-c = conn.cursor()
-
-for path in sql_files:
-    with open(path, encoding='utf-8') as file:
-        query = file.read()
-    c.execute(query)
-
-def readSqliteTable():
-    try:
-        sqliteConnection = sqlite3.connect('./opg_baza.db')
-        cursor = sqliteConnection.cursor()
-        print("Connected to SQLite")
-
-        sqlite_select_query = """SELECT * from opg"""
-        cursor.execute(sqlite_select_query)
-        records = cursor.fetchall()
-        print("Total rows are:  ", len(records))
-        print("Printing each row")
-        for row in records:
-            print("Id: ", row[0])
-            print("Name: ", row[1])
-            print("Email: ", row[2])
-            print("JoiningDate: ", row[3])
-            print("Salary: ", row[4])
-            print("\n")
-
-        cursor.close()
-    except sqlite3.Error as error:
-        print("Failed to read data from sqlite table", error)
-    finally:
-        if sqliteConnection:
-            sqliteConnection.close()
-            print("The SQLite connection is closed")
-
-readSqliteTable()
-
-conn.commit()
-conn.close()
-
-#KRAJ PROBLEMA
 
 
 if __name__ == '__main__':

@@ -5,10 +5,18 @@
 -Promjene koje su dodane:<br>
 *originalni projekt je prebačen u Flask, te su se iskoristili Flash templates<br>
 *dodana je wtf forma za submit obrasca<br>
-*dodana je mapa sa popisom OPG-ova<br>
-*dodana je baza uz pomoć Firestore-a<br>
+*osposobljena je pretplata na newsletter<br>
+*pri unosu maila za newsletter zadarska-polja@gmail.com šalje mail na dodanu adresu
 <p>
 <p>
+-što se još mora dodati:<br>
+*spojiti wtf-obrazac na firestore bazu podataka
+*potrebna pomoć profesora 
 <p>
 Autorice:<br>
 Marija Pavlović i Marija Nikolić
+
+<p>
+<p>
+NAPOMENA:<br>
+Slučajno su overwriteani commitovi Marije pavlović jer je Marija Nikolić morala raditi force push na git.
