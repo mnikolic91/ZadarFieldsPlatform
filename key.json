@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "zadarska-polja-7e580",
+  "private_key_id": "2d235f42c04dc759839a9201e572025dd961853a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDMLR1oWdrgmTEZ\nrhWK8mPlYZd23MWDW7xKwUHSL9YuUHV1h2NgNuqoa9GGae4nE9IOoduNJnFXT5ej\n5ZjbSdAxIk4wGEtrzyaM2J3r24/aKF0xbzobk8pVyBZruidPL3Pzoo9xWoPcuh56\nzCwUkyX+EzSRl2dClfAwNy9ixSGCkDepRRyL9DA4dEHh7pgRcC4MimbCGSP3cwqA\n3hY8tnF1Y5f/KwAmqk6MFZ7cHBR8uPNKUmooCjpaoesbfgaXqy8sRD6vwkzIaxk3\nHRRNcmizU+G5KzwXvEug8BBDYEpUI4VjeXk1atso1ShwI1f37yLAb45zDi8gpybP\nE0bB8SZ7AgMBAAECggEAZVsiBZrRhnxVvQdHx3WjdIu5Sna3EAn6k2uTdrlrjAtB\n++mNQgaQ/7GiTiUI5do3hS8BU/UY/7xRrTl9Y6KlWLbMdKCi1C591x5zatHQe/5c\noP0zrdv0bhgJVUoQWIVYfMIejileWzUDi3cOjNotWo8DIiE0UAApv22ttszgYTS+\nQA4zomGJPaVpkIALY4R4327iOqMry7EMsEVSPfZOVx1qoFM18M+0DpLODhXxikCy\nEEA+TIz9fNWih/g3FGxx2EYuVjIwSn+G5SQDLMCSesYVyf6qS1Ml1ak29gR1PL8L\nscEcjkH8h03tRXO0byoEXruLbUG2bDKZxPcOL3JDsQKBgQDwR6Zr+0mB+gwT3b/7\nWetzyIQc22SjNQShTpW+3/Ko7Gb8+6oPaYZpJAuHjJr4dRY2rmKA3e4eZCSKmEk8\nTPauorGSOEztPLkpTQ1WNPR/BCtX75KVzgm6T790vrqnEvSbGmPugiTIH6SDeM6n\n+NsigV5R1P+xvN66jg12pXtv0QKBgQDZiMeHAFr08ZEZj+JVMVw5R+jkuU2GO7vz\nfgELuJ74fP8gJe1UyGEy+pnfd2o63LqozcKTIa11K0TTLRB7rWdFgv+TwnCw/omy\naAq6RveQFlJoXjYB/rpWO1N0HP3mcd6LKTaKiTv49NRu4Xy3jzIgXmrXdSA5haBg\n9TI/NwBwiwKBgA6cPLlaKUkW/D8E/9R3zkJXEflzObZW1fY9Agv+MBIndceyQc/4\nGa0w/OZ8HTw4WmZuyhyN4hnE+xfWVLWu9F0AFY4PkFXomFWzkrkINUm35i7NqXsk\ncSD8Emc15cGc/HSl8SeikDv++JDp+p7qGeEKPsL5EacsFdsAIj9xpoTRAoGAaIlo\niSHMlAU6W3Rfqd0MmqJJ8xBxht5R1hNpYT6ZdoRq/gH76VBaFWuEYnU6YYsNUG2A\n4b+/YZ0nd+wiDa0pAaiQNWutSAEqHsgMz7Om6GExvOH5RkApP6NG2XfNM97ouStX\nAIAuh9bv91D45CU2S4PUCDJLCBmFFtL+EI7X8T0CgYBN2BHFtgzA8cqqZPn6aG4m\nRSb2HQ+hl0kfJ4ztpZTuvY0SJbLN201QSOT6jJNn4dCoM7GSVKkiYG0ENxCfG/LB\ncpun8Xar96GZRIaz/nCitBwXAy4/uViMJbZGnhE2UvjT8C3D3FQGYIt8Ja55jn1O\nsrzLZxztopYpH9CQ57Xucg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-wxew3@zadarska-polja-7e580.iam.gserviceaccount.com",
+  "client_id": "110624801842242486125",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-wxew3%40zadarska-polja-7e580.iam.gserviceaccount.com"
+}

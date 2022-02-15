@@ -1,16 +1,38 @@
 
+from random import random
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField, BooleanField
 from wtforms.validators import DataRequired, Email
 from flask_mail import Mail, Message
 import email_validator
+import os
+from flask import Flask, request, jsonify
+import firebase_admin
+from firebase_admin import credentials, firestore, initialize_app
+#from firebase_admin import credentials, firestore, initialize_app
 
 
 
 #secret key za formu
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "blabla"
+
+#firebase config
+cred = credentials.Certificate('key.json')
+default_app = initialize_app(cred)
+db = firestore.client()
+
+
+#konfiguracija flask maila
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = 'zadarskapolja@gmail.com'
+app.config['MAIL_PASSWORD'] = 'P@ssv0rd.'
+mail = Mail(app)
+
 
 #forma na lokaciji obrazac.html
 class OPGForm(FlaskForm):
@@ -22,14 +44,7 @@ class OPGForm(FlaskForm):
     submit = SubmitField("Pošalji")
 
 
-#konfiguracija flask maila
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'zadarskapolja@gmail.com'
-app.config['MAIL_PASSWORD'] = 'P@ssv0rd.'
-mail = Mail(app)
+opg_list=[]
 
 @app.route('/')
 def index():
@@ -55,10 +70,25 @@ def linkovi():
 def newsletter():
     return render_template('newsletter.html')
 
+@app.route('/uspjeh')
+def uspjeh():
+    return render_template('uspjeh.html')
+
+
+#OBRAZAC KOJI UPISUJE UNESENE PODATKE IZRAVNO U FIRESTORE BAZU PODATAKA POD IMENOM VLASNIKA OPG-A
+
 @app.route('/obrazac', methods=['GET', 'POST'])
 def obrazac():
     form = OPGForm()
     if form.validate_on_submit():
+        data = {
+        u'ime_opg': form.opg.data,
+        u'ime_vlasnika': form.ime.data,
+        u'oib': form.oib.data,
+        u'kontakt': form.kontakt.data
+        }
+         # Add a new doc in collection 'cities' with ID 'LA'
+        db.collection(u'opg').document(form.ime.data).set(data)
         return render_template('uspjeh.html')
     return render_template('obrazac.html',
     form = form)
@@ -78,8 +108,9 @@ def signup():
     msg.body = "Da je baba muško, zvala bi se Duško!"
     mail.send(msg)
     return render_template('newsletter.html')
-  
-  
+
+
+
 
 
 

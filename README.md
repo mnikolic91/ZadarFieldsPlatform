@@ -3,15 +3,16 @@
 <h3>Zadarska polja - projekt 2022.<br>
 -Projekt je rađen sa Flaskom te je potrebno gledati ga uz pomoć virtualnog sučelja.<br>
 -Promjene koje su dodane:<br>
+*dodana google maps tražilica opg-ova <br>
 *originalni projekt je prebačen u Flask, te su se iskoristili Flash templates<br>
 *dodana je wtf forma za submit obrasca<br>
 *osposobljena je pretplata na newsletter<br>
-*pri unosu maila za newsletter zadarska-polja@gmail.com šalje mail na dodanu adresu
+*pri unosu maila za newsletter zadarska-polja@gmail.com šalje mail na dodanu adresu<br>
+*wtf-forma je spojena sa firestore bazom podataka<br>
+*baza prima podatke pod imenom vlasnika opg-a<br>
+*male estetke promjene stranice zbog funkcionalnosti
 <p>
 <p>
--što se još mora dodati:<br>
-*spojiti wtf-obrazac na firestore bazu podataka
-*potrebna pomoć profesora 
 <p>
 Autorice:<br>
 Marija Pavlović i Marija Nikolić
@@ -19,4 +20,4 @@ Marija Pavlović i Marija Nikolić
 <p>
 <p>
 NAPOMENA:<br>
-Slučajno su overwriteani commitovi Marije pavlović jer je Marija Nikolić morala raditi force push na git.
+Slučajno su overwriteani commitovi Marije Pavlović jer je Marija Nikolić morala raditi force push na git.
