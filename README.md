@@ -20,15 +20,14 @@
 >>
 >> - baza prima podatke pod imenom vlasnika opg-a
 >>
->> - male estetke promjene stranice zbog funkcionalnosti
+>> - male estetke promjene stranice zbog funkcionalnosti  
 
-  
-  
+
 Autorice:
 
 Marija Pavlović i Marija Nikolić  
 
 
-NAPOMENA:
+**NAPOMENA:**
 
 Slučajno su overwriteani commitovi Marije Pavlović jer je Marija Nikolić morala raditi force push na git.
