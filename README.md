@@ -4,7 +4,7 @@
 
 > Projekt je rađen sa Flaskom te je potrebno gledati ga uz pomoć virtualnog sučelja.
 > 
-> Git Bash:
+> Upute za pokretanje koristeći Git Bash:
 >  - python -m venv venv
 >  - source venv/Scripts/activate
 >  - pip install -r requirements.txt
