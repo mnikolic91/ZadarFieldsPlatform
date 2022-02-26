@@ -6,21 +6,21 @@
 
 >> Promjene koje su dodane:
 
-> - dodana google maps tražilica opg-ova
+>> - dodana google maps tražilica opg-ova
 
-> - originalni projekt je prebačen u Flask, te su se iskoristili Flash templates
+>> - originalni projekt je prebačen u Flask, te su se iskoristili Flash templates
 
-> - dodana je wtf forma za submit obrasca
+>> - dodana je wtf forma za submit obrasca
 
-> - osposobljena je pretplata na newsletter
+>> - osposobljena je pretplata na newsletter
 
-> - pri unosu maila za newsletter zadarska-polja@gmail.com šalje mail na dodanu adresu
+>> - pri unosu maila za newsletter zadarska-polja@gmail.com šalje mail na dodanu adresu
 
-> - wtf-forma je spojena sa firestore bazom podataka
+>> - wtf-forma je spojena sa firestore bazom podataka
 
-> - baza prima podatke pod imenom vlasnika opg-a
+>> - baza prima podatke pod imenom vlasnika opg-a
 
-> - male estetke promjene stranice zbog funkcionalnosti
+>> - male estetke promjene stranice zbog funkcionalnosti
 
   
   
