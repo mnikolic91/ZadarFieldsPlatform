@@ -3,7 +3,11 @@
 ### Zadarska polja - projekt 2022.
 
 > Projekt je rađen sa Flaskom te je potrebno gledati ga uz pomoć virtualnog sučelja.
->
+> Git Bash:
+>  - python -m venv venv
+>  - source venv/Scripts/activate
+>  - pip install -r requirements.txt
+>  - python app.py
 >> Promjene koje su dodane:
 >>
 >> - dodana google maps tražilica opg-ova
