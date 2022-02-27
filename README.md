@@ -2,7 +2,11 @@
 
 ### Zadarska polja - projekt 2022.
 
-> Projekt je rađen sa Flaskom te je potrebno gledati ga uz pomoć virtualnog sučelja.
+> Stranica je osmišljena kao baza podataka lokalnih OPG-ova, te promocija agrokulture našeg područja. 
+> Koristimo ju za više namjera. Osnovna je skupljanje informacija o OPG-ovima kroz naš wtf-flask form, te slanje tih podataka u našu firestore bazu podataka.
+> Istovremeno nam služi i za promociju i promicanje lokalnih proizvođača jer kupci i korisnici usluga mogu pretražiti naše OPG-ova preko google maps karte,
+> ali se i pretplatiti na naš newsletter i primati redovne novosti sa naših zelenih polja.
+> Samim time se kupci mogu informirati o sezoni povrća, najnovijim OPG-ovima koji traže svoje mjesto na tržištu i sl.
 > 
 > Upute za pokretanje koristeći Git Bash:
 >  - python -m venv venv
