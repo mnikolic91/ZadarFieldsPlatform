@@ -87,11 +87,20 @@ def obrazac():
         u'oib': form.oib.data,
         u'kontakt': form.kontakt.data
         }
-         # Add a new doc in collection 'cities' with ID 'LA'
         db.collection(u'opg').document(form.ime.data).set(data)
         return render_template('uspjeh.html')
     return render_template('obrazac.html',
     form = form)
+
+
+#DOBAVLJAJMO PODATKE IZ FIRESTORE BAZE
+
+def get_full_collection():
+    db = firestore.Client()
+    docs = db.collection(u'opg').stream()
+    for doc in docs:
+        print(f'{doc.id} => {doc.to_dict}')
+
 
 
 
