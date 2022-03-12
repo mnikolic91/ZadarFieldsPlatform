@@ -1,4 +1,3 @@
-
 from random import random
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
@@ -7,10 +6,9 @@ from wtforms.validators import DataRequired, Email
 from flask_mail import Mail, Message
 import email_validator
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, json
 import firebase_admin
 from firebase_admin import credentials, firestore, initialize_app
-#from firebase_admin import credentials, firestore, initialize_app
 
 
 
@@ -22,6 +20,9 @@ app.config['SECRET_KEY'] = "blabla"
 cred = credentials.Certificate('key.json')
 default_app = initialize_app(cred)
 db = firestore.client()
+todo_ref = db.collection('opg')
+
+
 
 
 #konfiguracija flask maila
@@ -74,6 +75,10 @@ def newsletter():
 def uspjeh():
     return render_template('uspjeh.html')
 
+@app.route('/opgovi')
+def opgovi():
+    return render_template('opgovi.html')
+
 
 #OBRAZAC KOJI UPISUJE UNESENE PODATKE IZRAVNO U FIRESTORE BAZU PODATAKA POD IMENOM VLASNIKA OPG-A
 
@@ -87,7 +92,7 @@ def obrazac():
         u'oib': form.oib.data,
         u'kontakt': form.kontakt.data
         }
-        db.collection(u'opg').document(form.ime.data).set(data)
+        db.collection(u'opg').document(form.oib.data).set(data)
         return render_template('uspjeh.html')
     return render_template('obrazac.html',
     form = form)
@@ -95,26 +100,34 @@ def obrazac():
 
 #DOBAVLJAJMO PODATKE IZ FIRESTORE BAZE
 
-def get_full_collection():
-    db = firestore.Client()
-    docs = db.collection(u'opg').stream()
-    for doc in docs:
-        print(f'{doc.id} => {doc.to_dict}')
+@app.route('/ispis', methods=['GET'])
+def ispis():
+    """
+        read() : Fetches documents from Firestore collection as JSON.
+        todo : Return document that matches query ID.
+        all_todos : Return all documents.
+    """
+    try:
+        # Check if ID was passed to URL query
+        todo_id = request.args.get('ime_vlasnika')
+        if todo_id:
+            todo = todo_ref.document(todo_id).get()
+            data = jsonify(todo.to_dict(), 200)
+            return data 
+        else:
+            all_todos = [doc.to_dict() for doc in todo_ref.stream()]
+            data2 = jsonify(all_todos), 200
+            return data2
 
-
-
-
-@app.route('/opgovi')
-def opgovi():
-    return render_template('opgovi.html')
-
+    except Exception as e:
+        return f"An Error Occured: {e}"
 
 #FORMA ZA SKUPLJANJE MAILA ZA NEWSLETTER
 @app.route('/newsletter', methods = ['POST', 'GET'])
 def signup():
     email = request.form['email']
-    msg = Message('Alo?', sender='zadarskapolja@gmail.com', recipients=[email])
-    msg.body = "Da je baba muško, zvala bi se Duško!"
+    msg = Message('Zadarska polja', sender='zadarskapolja@gmail.com', recipients=[email])
+    msg.body = "Uspješno ste se prijavili na naš newsletter!"
     mail.send(msg)
     return render_template('newsletter.html')
 

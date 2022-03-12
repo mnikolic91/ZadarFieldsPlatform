@@ -1,11 +1,11 @@
 .column {
-    float: left;
+    float: right;
   }
   
   .left {
-    width: 25%;
+    width: 30%;
   }
   
   .right {
-    width: 75%;
+    width: 70%;
   }
