@@ -92,7 +92,7 @@ def obrazac():
         u'oib': form.oib.data,
         u'kontakt': form.kontakt.data
         }
-        db.collection(u'opg').document(form.oib.data).set(data)
+        db.collection(u'opg').document(form.ime.data).set(data)
         return render_template('uspjeh.html')
     return render_template('obrazac.html',
     form = form)
